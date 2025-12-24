@@ -1,9 +1,10 @@
 # Bughisweeper
-![Java](https://img.shields.io/badge/Java-17+-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![Android](https://img.shields.io/badge/Android-14-3DDC84?style=for-the-badge&logo=android&logoColor=white)
+![Java](https://img.shields.io/badge/Java-8-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Android](https://img.shields.io/badge/Android-12L-3DDC84?style=for-the-badge&logo=android&logoColor=white)
 ![Min SDK](https://img.shields.io/badge/Min%20SDK-21-3DDC84?style=for-the-badge&logo=android&logoColor=white)
-![Gradle](https://img.shields.io/badge/Gradle-8.0+-02303A?style=for-the-badge&logo=gradle&logoColor=white)
-![Material Design](https://img.shields.io/badge/Material%20Design-3-757575?style=for-the-badge&logo=material-design&logoColor=white)
+![Target SDK](https://img.shields.io/badge/Target%20SDK-32-3DDC84?style=for-the-badge&logo=android&logoColor=white)
+![Gradle](https://img.shields.io/badge/Gradle-7.0+-02303A?style=for-the-badge&logo=gradle&logoColor=white)
+![Material Design](https://img.shields.io/badge/Material%20Design-1.5.0-757575?style=for-the-badge&logo=material-design&logoColor=white)
 
 An advanced Android implementation of the classic Minesweeper game, reimagined with educational features, mathematical analysis tools, and unique gameplay enhancements.
 > **Note**: This project was designed and implemented by me, with selective use of AI tools for research, refactoring, and productivity - similar to modern IDE assistance.
@@ -108,17 +109,23 @@ This project was developed to:
 ## Requirements
 
 - **Minimum SDK**: Android 5.0 (API 21)
-- **Target SDK**: Android 14 (API 34)
-- **Permissions**: None required (no internet, location, or storage permissions)
-- **Storage**: ~15 MB
+- **Target SDK**: Android 12L (API 32)
+- **Compile SDK**: Android 12L (API 32)
+- **Java Version**: 8 (source/target compatibility)
+- **Permissions**: 
+  - `VIBRATE` - Haptic feedback during gameplay
+  - `INTERNET` - Reserved for future features (currently unused)
+- **Storage**: ~15-20 MB
 
 ## Installation & Setup
 
 ### Prerequisites
-- **Java Development Kit (JDK)**: Version 17 or higher
-- **Android Studio**: Latest stable version (recommended: Hedgehog or newer)
-- **Android SDK**: API Level 21+ (Android 5.0) minimum, API Level 34 (Android 14) target
-- **Gradle**: Version 8.0+ (bundled with Android Studio)
+- **Java Development Kit (JDK)**: Version 8 or higher (Java 11 recommended)
+- **Android Studio**: Bumblebee or newer
+- **Android SDK**: 
+  - Minimum API Level 21 (Android 5.0 Lollipop)
+  - Target/Compile API Level 32 (Android 12L)
+- **Gradle**: Version 7.0+ (bundled with Android Studio)
 
 ### Quick Start
 
@@ -146,9 +153,15 @@ cd bughisweeper
 
 ### First Launch Notes
 - The application will automatically create local SharedPreferences storage on first launch
-- No internet connection required - all data is stored locally
-- Create a user account on first launch to access game features
 - Video tutorials are embedded in the app resources (no download needed)
+- Create a user account on first launch to access game features
+- **Permissions**: The app requires VIBRATE (for haptic feedback) and INTERNET (for potential future features)
+
+### Device Requirements
+- **Minimum**: Android 5.0 (API 21) or higher
+- **Tested on**: Android 12L (API 32)
+- **Orientation**: Portrait mode (game screens)
+- **Storage**: ~15-20 MB
 
 ### Troubleshooting
 
@@ -162,13 +175,18 @@ cd bughisweeper
 **SDK Path Issues:**
 - Create a `local.properties` file in the project root
 - Add: `sdk.dir=/path/to/your/Android/Sdk`
+- Example (Windows): `sdk.dir=C\:\\Users\\YourName\\AppData\\Local\\Android\\Sdk`
+- Example (Mac/Linux): `sdk.dir=/Users/YourName/Library/Android/sdk`
 
 **Build Errors:**
-- Ensure JDK 17+ is set in Android Studio (File → Project Structure → SDK Location)
+- Ensure JDK 8+ is set in Android Studio (File → Project Structure → SDK Location)
+- Install Android SDK API Level 32 if missing (Tools → SDK Manager)
 - Update Android SDK tools if prompted
 - Invalidate caches: File → Invalidate Caches / Restart
 
----
+**Room Database Issues:**
+- The app uses Room 2.4.2 for potential future features
+- Database files are created automatically in app storage
 
 
 ## How to Play
