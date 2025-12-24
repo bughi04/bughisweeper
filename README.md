@@ -1,8 +1,12 @@
 # Bughisweeper
-
-> **Note**: This project was designed and implemented by me, with selective use of AI tools for research, refactoring, and productivity - similar to modern IDE assistance.
+![Java](https://img.shields.io/badge/Java-17+-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Android](https://img.shields.io/badge/Android-14-3DDC84?style=for-the-badge&logo=android&logoColor=white)
+![Min SDK](https://img.shields.io/badge/Min%20SDK-21-3DDC84?style=for-the-badge&logo=android&logoColor=white)
+![Gradle](https://img.shields.io/badge/Gradle-8.0+-02303A?style=for-the-badge&logo=gradle&logoColor=white)
+![Material Design](https://img.shields.io/badge/Material%20Design-3-757575?style=for-the-badge&logo=material-design&logoColor=white)
 
 An advanced Android implementation of the classic Minesweeper game, reimagined with educational features, mathematical analysis tools, and unique gameplay enhancements.
+> **Note**: This project was designed and implemented by me, with selective use of AI tools for research, refactoring, and productivity - similar to modern IDE assistance.
 
 ## About
 
