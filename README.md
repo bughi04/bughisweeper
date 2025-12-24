@@ -211,7 +211,3 @@ cd bughisweeper
 - Video playback integration
 - Fragment-based architecture
 - Resource management and theming
-
-**Development Time**: Extensive development with iterative improvements
-
-**Purpose**: Portfolio project demonstrating Android development capabilities and educational game design
