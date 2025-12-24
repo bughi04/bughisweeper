@@ -112,12 +112,63 @@ This project was developed to:
 - **Permissions**: None required (no internet, location, or storage permissions)
 - **Storage**: ~15 MB
 
-## Installation
+## Installation & Setup
 
-1. Clone the repository
-2. Open in Android Studio
-3. Sync Gradle files
-4. Run on emulator or physical device
+### Prerequisites
+- **Java Development Kit (JDK)**: Version 17 or higher
+- **Android Studio**: Latest stable version (recommended: Hedgehog or newer)
+- **Android SDK**: API Level 21+ (Android 5.0) minimum, API Level 34 (Android 14) target
+- **Gradle**: Version 8.0+ (bundled with Android Studio)
+
+### Quick Start
+
+```bash
+# Clone the repository
+git clone https://github.com/bughi104/bughisweeper.git
+
+# Navigate to project directory
+cd bughisweeper
+
+# Open in Android Studio
+# File → Open → Select the 'bughisweeper' folder
+
+# Sync Gradle files
+# Android Studio will prompt you to sync - click "Sync Now"
+# Or manually: File → Sync Project with Gradle Files
+
+# Build the project
+./gradlew build
+
+# Run on emulator or connected device
+# Click the "Run" button (▶️) in Android Studio
+# Or use: ./gradlew installDebug
+```
+
+### First Launch Notes
+- The application will automatically create local SharedPreferences storage on first launch
+- No internet connection required - all data is stored locally
+- Create a user account on first launch to access game features
+- Video tutorials are embedded in the app resources (no download needed)
+
+### Troubleshooting
+
+**Gradle Sync Issues:**
+```bash
+# Clean and rebuild
+./gradlew clean
+./gradlew build
+```
+
+**SDK Path Issues:**
+- Create a `local.properties` file in the project root
+- Add: `sdk.dir=/path/to/your/Android/Sdk`
+
+**Build Errors:**
+- Ensure JDK 17+ is set in Android Studio (File → Project Structure → SDK Location)
+- Update Android SDK tools if prompted
+- Invalidate caches: File → Invalidate Caches / Restart
+
+---
 
 
 ## How to Play
