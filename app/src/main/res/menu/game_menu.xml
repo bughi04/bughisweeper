@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_new_game"
+        android:title="@string/new_game"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_reset_view"
+        android:title="Reset View"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_math_education"
+        android:title="Learn Math"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_math_hint"
+        android:title="Mathematical Hint"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_toggle_math_view"
+        android:title="Toggle Math View"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_reset"
+        android:title="Reset Game"
+        app:showAsAction="never" />
+
+</menu>

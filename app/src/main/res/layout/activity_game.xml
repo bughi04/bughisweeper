@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimary"
+    tools:context=".GameActivity">
+
+    <!-- Game Header -->
+    <LinearLayout
+        android:id="@+id/clHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:background="?attr/colorPrimaryDark"
+        android:elevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="⏱️ Time: 0:00"
+            android:gravity="start|center_vertical"
+            android:drawablePadding="8dp" />
+
+        <TextView
+            android:id="@+id/tvBugsLeft"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="💣 Bugs: 10" />
+
+        <Button
+            android:id="@+id/btnFlag"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:text="🚩"
+            android:textSize="20sp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:foreground="?attr/selectableItemBackground"
+            style="?android:attr/borderlessButtonStyle" />
+
+    </LinearLayout>
+
+    <!-- Main Game Area -->
+    <LinearLayout
+        android:id="@+id/gameArea"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:background="?android:attr/colorBackground"
+        app:layout_constraintBottom_toTopOf="@+id/mathInfoPanel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clHeader">
+
+        <!-- Superpowers Panel (Left Side) -->
+        <ScrollView
+            android:id="@+id/fragmentContainerPowerups"
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="4dp"
+            android:background="#E3F2FD"
+            android:padding="4dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/superpowerButtonsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="⚡ SUPERPOWERS"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:textAlignment="center"
+                    android:background="?attr/colorPrimary"
+                    android:textColor="@android:color/white"
+                    android:padding="8dp"
+                    android:layout_marginBottom="4dp" />
+
+                <!-- Superpowers will be added programmatically here -->
+
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- Game Board Container -->
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?android:attr/colorBackground">
+
+            <!-- BoardView (Primary) -->
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fillViewport="true">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="8dp">
+
+                        <com.example.bughisweeper.BoardView
+                            android:id="@+id/boardView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="?android:attr/colorBackground" />
+
+                        <!-- Fallback GridLayout -->
+                        <GridLayout
+                            android:id="@+id/gameGrid"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:columnCount="8"
+                            android:rowCount="8"
+                            android:padding="8dp"
+                            android:background="?android:attr/colorBackground"
+                            android:visibility="gone" />
+
+                    </FrameLayout>
+
+                </HorizontalScrollView>
+
+            </ScrollView>
+
+        </FrameLayout>
+
+        <!-- Game Stats Panel (Right Side) -->
+        <ScrollView
+            android:id="@+id/fragmentContainerStats"
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="4dp"
+            android:background="#E8F5E9"
+            android:padding="4dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="📊 STATISTICS"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:textAlignment="center"
+                    android:background="?attr/colorAccent"
+                    android:textColor="@android:color/white"
+                    android:padding="8dp"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/tvGameStats"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Game statistics will appear here..."
+                    android:textSize="10sp"
+                    android:padding="4dp"
+                    android:background="@android:color/white" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <!-- Mathematical Information Panel -->
+    <LinearLayout
+        android:id="@+id/mathInfoPanel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="?attr/colorAccent"
+        android:padding="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/llMathControls"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/tvProbabilityInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:padding="8dp"
+            android:text="📊 Mathematical Analysis"
+            android:textSize="12sp"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="4dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvMathInsights"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:padding="8dp"
+            android:text="🧮 Mathematical insights will appear here"
+            android:textSize="10sp"
+            android:textColor="@android:color/black"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <!-- Math Control Buttons -->
+    <LinearLayout
+        android:id="@+id/llMathControls"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:background="?attr/colorPrimaryDark"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btnHint"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="4dp"
+            android:text="💡 Hint"
+            android:textSize="12sp"
+            android:textColor="@android:color/white"
+            android:background="?attr/colorAccent" />
+
+        <Button
+            android:id="@+id/btnMathView"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:text="📊 Math"
+            android:textSize="12sp"
+            android:textColor="@android:color/white"
+            android:background="?attr/colorAccent" />
+
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginStart="4dp"
+            android:text="🔄 Reset"
+            android:textSize="12sp"
+            android:textColor="@android:color/white"
+            android:background="?attr/colorAccent" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

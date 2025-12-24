@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Existing colors from original file -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <!-- Common Colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="gray">#FF888888</color>
+    <color name="light_gray">#FFE0E0E0</color>
+    <color name="dark_gray">#FF444444</color>
+
+    <!-- Classic Theme Colors -->
+    <color name="classic_primary">#FF3F51B5</color>
+    <color name="classic_primary_dark">#FF303F9F</color>
+    <color name="classic_accent">#FFFF4081</color>
+    <color name="classic_background">#FFEEEEEE</color>
+    <color name="classic_cell_revealed">#FFDDDDDD</color>
+    <color name="classic_cell_unrevealed">#FFBBBBBB</color>
+    <color name="classic_bug">#FF000000</color>
+    <color name="classic_flag">#FFFF0000</color>
+
+    <!-- Dark Theme Colors -->
+    <color name="dark_primary">#FF212121</color>
+    <color name="dark_primary_dark">#FF000000</color>
+    <color name="dark_accent">#FF80CBC4</color>
+    <color name="dark_background">#FF121212</color>
+    <color name="dark_cell_revealed">#FF333333</color>
+    <color name="dark_cell_unrevealed">#FF555555</color>
+    <color name="dark_bug">#FFBBBBBB</color>
+    <color name="dark_flag">#FFFF5252</color>
+
+    <!-- Forest Theme Colors -->
+    <color name="forest_primary">#FF388E3C</color>
+    <color name="forest_primary_dark">#FF2E7D32</color>
+    <color name="forest_accent">#FFFFEB3B</color>
+    <color name="forest_background">#FFE8F5E9</color>
+    <color name="forest_cell_revealed">#FFC8E6C9</color>
+    <color name="forest_cell_unrevealed">#FF81C784</color>
+    <color name="forest_bug">#FF33691E</color>
+    <color name="forest_flag">#FFF57F17</color>
+
+    <!-- Ocean Theme Colors -->
+    <color name="ocean_primary">#FF1976D2</color>
+    <color name="ocean_primary_dark">#FF0D47A1</color>
+    <color name="ocean_accent">#FF00E5FF</color>
+    <color name="ocean_background">#FFE3F2FD</color>
+    <color name="ocean_cell_revealed">#FFBBDEFB</color>
+    <color name="ocean_cell_unrevealed">#FF64B5F6</color>
+    <color name="ocean_bug">#FF01579B</color>
+    <color name="ocean_flag">#FFEF6C00</color>
+
+    <!-- Space Theme Colors -->
+    <color name="space_primary">#FF512DA8</color>
+    <color name="space_primary_dark">#FF311B92</color>
+    <color name="space_accent">#FFFF9800</color>
+    <color name="space_background">#FF000A1F</color>
+    <color name="space_cell_revealed">#FF1A237E</color>
+    <color name="space_cell_unrevealed">#FF3949AB</color>
+    <color name="space_bug">#FF7986CB</color>
+    <color name="space_flag">#FFFFAB00</color>
+
+    <!-- Number colors (for adjacent bug counts) -->
+    <color name="number_1">#FF0000FF</color> <!-- Blue -->
+    <color name="number_2">#FF008000</color> <!-- Green -->
+    <color name="number_3">#FFFF0000</color> <!-- Red -->
+    <color name="number_4">#FF800080</color> <!-- Purple -->
+    <color name="number_5">#FF800000</color> <!-- Maroon -->
+    <color name="number_6">#FF008080</color> <!-- Teal -->
+    <color name="number_7">#FF000000</color> <!-- Black -->
+    <color name="number_8">#FF808080</color> <!-- Gray -->
+
+    <!-- NEW: Password Strength Colors -->
+    <color name="password_very_weak">#FFFF5252</color>
+    <color name="password_weak">#FFFF9800</color>
+    <color name="password_fair">#FFFFC107</color>
+    <color name="password_good">#FF8BC34A</color>
+    <color name="password_strong">#FF4CAF50</color>
+
+    <!-- NEW: Superpower Status Colors -->
+    <color name="superpower_ready">#FF4CAF50</color>
+    <color name="superpower_ready_text">#FFFFFFFF</color>
+    <color name="superpower_cooldown">#FF757575</color>
+    <color name="superpower_cooldown_text">#FF424242</color>
+    <color name="superpower_active">#FFFF9800</color>
+    <color name="superpower_used">#FFD32F2F</color>
+    <color name="superpower_used_text">#FFEEEEEE</color>
+
+    <!-- NEW: Mathematical Analysis Colors -->
+    <color name="probability_high">#FFFF5252</color>     <!-- High mine probability -->
+    <color name="probability_medium">#FFFFC107</color>   <!-- Medium mine probability -->
+    <color name="probability_low">#FF4CAF50</color>      <!-- Low mine probability -->
+    <color name="probability_safe">#FF2196F3</color>     <!-- Very safe cell -->
+
+    <!-- NEW: Information Theory Colors -->
+    <color name="entropy_high">#FF9C27B0</color>         <!-- High information content -->
+    <color name="entropy_medium">#FF673AB7</color>       <!-- Medium information content -->
+    <color name="entropy_low">#FF3F51B5</color>          <!-- Low information content -->
+
+    <!-- NEW: Game Statistics Colors -->
+    <color name="stats_positive">#FF4CAF50</color>
+    <color name="stats_negative">#FFFF5252</color>
+    <color name="stats_neutral">#FF757575</color>
+    <color name="stats_background">#FFF5F5F5</color>
+
+    <!-- NEW: Animation and Effect Colors -->
+    <color name="freeze_effect">#FF80DEEA</color>        <!-- Ice blue -->
+    <color name="xray_effect">#FF81C784</color>          <!-- X-ray green -->
+    <color name="sonar_effect">#FF64B5F6</color>         <!-- Sonar blue -->
+    <color name="lightning_effect">#FFFFD54F</color>     <!-- Lightning yellow -->
+    <color name="shield_effect">#FFFFB74D</color>        <!-- Shield gold -->
+    <color name="flag_effect">#FFFF5722</color>          <!-- Flag red-orange -->
+
+    <!-- NEW: Help and Tutorial Colors -->
+    <color name="help_header">#FF1976D2</color>
+    <color name="help_text">#FF424242</color>
+    <color name="help_accent">#FF03DAC6</color>
+    <color name="help_background">#FFFAFAFA</color>
+
+    <!-- NEW: Login and Security Colors -->
+    <color name="login_primary">#FF6200EE</color>
+    <color name="login_secondary">#FF03DAC6</color>
+    <color name="login_background">#FFF3E5F5</color>
+    <color name="login_error">#FFFF5252</color>
+    <color name="login_success">#FF4CAF50</color>
+</resources>

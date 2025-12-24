@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#F8F9FA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🧮 Interactive Mathematical Learning"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:padding="16dp"
+            android:background="@android:drawable/dialog_holo_light_frame"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Input Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@android:drawable/dialog_holo_light_frame"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🎯 Scenario Configuration"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Mines Input -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mines: "
+                    android:textSize="16sp"
+                    android:minWidth="80dp" />
+
+                <EditText
+                    android:id="@+id/etMines"
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:inputType="number"
+                    android:text="10"
+                    android:textAlignment="center" />
+
+                <SeekBar
+                    android:id="@+id/sbMines"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="16dp"
+                    android:max="49"
+                    android:progress="9" />
+
+            </LinearLayout>
+
+            <!-- Cells Input -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Cells: "
+                    android:textSize="16sp"
+                    android:minWidth="80dp" />
+
+                <EditText
+                    android:id="@+id/etCells"
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:inputType="number"
+                    android:text="64"
+                    android:textAlignment="center" />
+
+                <SeekBar
+                    android:id="@+id/sbCells"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="16dp"
+                    android:max="90"
+                    android:progress="54" />
+
+            </LinearLayout>
+
+            <!-- Revealed Input -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Revealed: "
+                    android:textSize="16sp"
+                    android:minWidth="80dp" />
+
+                <EditText
+                    android:id="@+id/etRevealed"
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:inputType="number"
+                    android:text="0"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="16dp"
+                    android:text="(Safe cells already found)"
+                    android:textSize="12sp"
+                    android:textStyle="italic" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnCalculate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🔄 Calculate Probabilities"
+                android:textSize="16sp"
+                android:background="#2196F3"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <!-- Results Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <!-- Basic Probability -->
+            <TextView
+                android:id="@+id/tvBasicProb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/dialog_holo_light_frame"
+                android:padding="16dp"
+                android:text="📊 Basic Probability\nCalculating..."
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Bayesian Result -->
+            <TextView
+                android:id="@+id/tvBayesianResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/dialog_holo_light_frame"
+                android:padding="16dp"
+                android:text="🧠 Bayesian Inference\nCalculating..."
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Entropy Result -->
+            <TextView
+                android:id="@+id/tvEntropyResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/dialog_holo_light_frame"
+                android:padding="16dp"
+                android:text="📈 Information Theory\nCalculating..."
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp" />
+
+        </LinearLayout>
+
+        <!-- Learning Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🎓 Educational Resources"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp" />
+
+            <Button
+                android:id="@+id/btnLearnBayesian"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="🧠 Learn Bayesian Inference"
+                android:textSize="14sp"
+                android:background="#4CAF50"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btnLearnEntropy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="📈 Learn Information Theory"
+                android:textSize="14sp"
+                android:background="#FF9800"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btnRealWorldExample"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="🌐 Real-World Applications"
+                android:textSize="14sp"
+                android:background="#9C27B0"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <!-- Mathematical Visualization -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@android:drawable/dialog_holo_light_frame"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📊 Probability Visualization"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp" />
+
+            <com.example.bughisweeper.MathVisualizationView
+                android:id="@+id/mathVisualization"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@android:color/white" />
+
+        </LinearLayout>
+
+        <!-- Detailed Explanation -->
+        <TextView
+            android:id="@+id/tvExplanation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/dialog_holo_light_frame"
+            android:padding="16dp"
+            android:text="🎓 Mathematical Insights will appear here..."
+            android:textSize="14sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Footer with Mathematical Formulas -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#E3F2FD"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📐 Key Mathematical Formulas"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• Basic Probability: P(mine) = mines ÷ unrevealed_cells\n• Bayesian Update: P(A|B) = P(B|A) × P(A) ÷ P(B)\n• Shannon Entropy: H = -Σ(p × log₂(p))\n• Expected Value: E(X) = Σ(x × P(x))"
+                android:textSize="12sp"
+                android:lineSpacingExtra="4dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

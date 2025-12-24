@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme -->
+    <style name="Theme.Bughisweeper" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color -->
+        <item name="colorPrimary">@color/classic_primary</item>
+        <item name="colorPrimaryVariant">@color/classic_primary_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color -->
+        <item name="colorSecondary">@color/classic_accent</item>
+        <item name="colorSecondaryVariant">@color/classic_accent</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+    </style>
+
+    <!-- Classic theme -->
+    <style name="Theme.Bughisweeper.Classic" parent="Theme.Bughisweeper">
+        <item name="colorPrimary">@color/classic_primary</item>
+        <item name="colorPrimaryVariant">@color/classic_primary_dark</item>
+        <item name="colorSecondary">@color/classic_accent</item>
+        <item name="android:windowBackground">@color/classic_background</item>
+        <item name="cellRevealedBackground">@color/classic_cell_revealed</item>
+        <item name="cellUnrevealedBackground">@color/classic_cell_unrevealed</item>
+        <item name="bugColor">@color/classic_bug</item>
+        <item name="flagColor">@color/classic_flag</item>
+    </style>
+
+    <!-- Dark theme -->
+    <style name="Theme.Bughisweeper.Dark" parent="Theme.Bughisweeper">
+        <item name="colorPrimary">@color/dark_primary</item>
+        <item name="colorPrimaryVariant">@color/dark_primary_dark</item>
+        <item name="colorSecondary">@color/dark_accent</item>
+        <item name="android:windowBackground">@color/dark_background</item>
+        <item name="cellRevealedBackground">@color/dark_cell_revealed</item>
+        <item name="cellUnrevealedBackground">@color/dark_cell_unrevealed</item>
+        <item name="bugColor">@color/dark_bug</item>
+        <item name="flagColor">@color/dark_flag</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!-- Forest theme -->
+    <style name="Theme.Bughisweeper.Forest" parent="Theme.Bughisweeper">
+        <item name="colorPrimary">@color/forest_primary</item>
+        <item name="colorPrimaryVariant">@color/forest_primary_dark</item>
+        <item name="colorSecondary">@color/forest_accent</item>
+        <item name="android:windowBackground">@color/forest_background</item>
+        <item name="cellRevealedBackground">@color/forest_cell_revealed</item>
+        <item name="cellUnrevealedBackground">@color/forest_cell_unrevealed</item>
+        <item name="bugColor">@color/forest_bug</item>
+        <item name="flagColor">@color/forest_flag</item>
+    </style>
+
+    <!-- Ocean theme -->
+    <style name="Theme.Bughisweeper.Ocean" parent="Theme.Bughisweeper">
+        <item name="colorPrimary">@color/ocean_primary</item>
+        <item name="colorPrimaryVariant">@color/ocean_primary_dark</item>
+        <item name="colorSecondary">@color/ocean_accent</item>
+        <item name="android:windowBackground">@color/ocean_background</item>
+        <item name="cellRevealedBackground">@color/ocean_cell_revealed</item>
+        <item name="cellUnrevealedBackground">@color/ocean_cell_unrevealed</item>
+        <item name="bugColor">@color/ocean_bug</item>
+        <item name="flagColor">@color/ocean_flag</item>
+    </style>
+
+    <!-- Space theme -->
+    <style name="Theme.Bughisweeper.Space" parent="Theme.Bughisweeper">
+        <item name="colorPrimary">@color/space_primary</item>
+        <item name="colorPrimaryVariant">@color/space_primary_dark</item>
+        <item name="colorSecondary">@color/space_accent</item>
+        <item name="android:windowBackground">@color/space_background</item>
+        <item name="cellRevealedBackground">@color/space_cell_revealed</item>
+        <item name="cellUnrevealedBackground">@color/space_cell_unrevealed</item>
+        <item name="bugColor">@color/space_bug</item>
+        <item name="flagColor">@color/space_flag</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!-- Custom attributes for game elements -->
+    <declare-styleable name="BughisTheme">
+        <attr name="cellRevealedBackground" format="color" />
+        <attr name="cellUnrevealedBackground" format="color" />
+        <attr name="bugColor" format="color" />
+        <attr name="flagColor" format="color" />
+    </declare-styleable>
+</resources>

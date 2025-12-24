@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvVideoIntro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="4dp"
+            android:text="Video introduction text"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Video Tutorial Buttons - Using LinearLayout instead of CardView -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@android:drawable/dialog_holo_light_frame"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📹 Video Demonstrations"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnBasicDemo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="🎮 Basic Gameplay Demo"
+                android:gravity="start|center_vertical" />
+
+            <Button
+                android:id="@+id/btnMathDemo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="📊 Mathematics Tutorial"
+                android:gravity="start|center_vertical" />
+
+            <Button
+                android:id="@+id/btnSuperpowerDemo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="⚡ Superpowers Guide"
+                android:gravity="start|center_vertical" />
+
+            <Button
+                android:id="@+id/btnAdvancedDemo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="🧠 Advanced Strategies"
+                android:gravity="start|center_vertical" />
+
+        </LinearLayout>
+
+        <!-- Educational Resources -->
+        <TextView
+            android:id="@+id/tvAdditionalResources"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:lineSpacingExtra="4dp"
+            android:text="Additional resources text"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Button
+            android:id="@+id/btnExternalResources"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="🌐 External Learning Resources" />
+
+    </LinearLayout>
+</ScrollView>

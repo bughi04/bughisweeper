@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.bughisweeper">
+
+    <!-- Permissions -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Bughisweeper">
+
+        <!-- Main Activity - Entry point -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Login Activity (if you want it as entry point instead) -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- Game Activity -->
+        <activity
+            android:name=".GameActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- Settings Activity -->
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- High Scores Activity -->
+        <activity
+            android:name=".HighScoresActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- Help Activity -->
+        <activity
+            android:name=".HelpActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- FIXED: Math Education Activity - properly declared -->
+        <activity
+            android:name=".MathEducationActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:label="Mathematical Learning" />
+        <activity
+            android:name=".VideoPlayerActivity"
+            android:exported="false"
+            android:parentActivityName=".SettingsActivity"
+            android:label="Tutorial Video"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
+
+    </application>
+
+</manifest>
