@@ -131,7 +131,7 @@ This project was developed to:
 
 ```bash
 # Clone the repository
-git clone https://github.com/bughi104/bughisweeper.git
+git clone https://github.com/bughi04/bughisweeper.git
 
 # Navigate to project directory
 cd bughisweeper
